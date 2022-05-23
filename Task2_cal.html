@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+
+    .block{
+        /* display : flex; */
+        display : inline-block;
+        margin :40%;
+        border:1px solid rgb(52, 51, 51);
+        border-radius : 3px;
+        width : 150px;
+        box-shadow: 3px 3px;
+    }
+    .screen{
+        border: 1px solid rgb(52, 51, 51);
+        border-radius: 4px;
+        box-shadow: 1px 1px;
+        height : 30px;
+        width : 130px;
+        margin : 7px;
+        font-size: 16px;
+        background-color: rgb(12, 198, 130);
+    }
+
+    form{
+        background-color: rgb(70, 69, 69);
+    }
+    .keys{
+        display:flex;
+        width : 200px;
+        padding : 3px 17px;
+
+    }
+    .operator{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn,.btn2{
+        border:1px solid black;
+        border-radius: 2px;
+        box-shadow: 1.5px 1.5px;
+        font-weight: 600;
+    }
+    .btn2{
+        background-color: rgb(76, 243, 235);
+    }
+    
+    .btn2:hover{
+        background-color:rgb(35, 155, 143);
+        box-shadow: none;
+        
+    }
+    .btn:hover{
+        background-color: grey;
+        box-shadow: none;
+    }
+    
+    #c_id{
+        border:1px solid black;
+        background-color: red;
+        border-radius: 2px;
+        box-shadow: 1.5px 1.5px;
+    }
+    #c_id:hover{
+        background-color: brown;
+        box-shadow: none;
+    }
+
+</style>
+
+<body>
+    <div class = "block">
+        <form name = "form">
+            <input class="screen" type="text" name="result">
+            <br>
+    <div class="keys">
+        <div class = "operand">
+            <input class="btn" type="button" value="9" onclick="form.result.value += '9'">
+            <input class="btn" type="button" value="8" onclick="form.result.value += '8'">
+            <input class="btn" type="button" value="7" onclick="form.result.value += '7'">
+            <br>
+            <input class="btn" type="button" value="6" onclick="form.result.value += '6'">
+            <input class="btn" type="button" value="5" onclick="form.result.value += '5'">
+            <input class="btn" type="button" value="4" onclick="form.result.value += '4'">
+            <br>
+            <input class="btn" type="button" value="3" onclick="form.result.value += '3'">
+            <input class="btn" type="button" value="2" onclick="form.result.value += '2'">
+            <input class="btn" type="button" value="1 " onclick="form.result.value += '1'">
+            <br>
+            <input class="btn" type="button" value="0" onclick="form.result.value += '0'">
+            <input class="btn" type="button" value="=" onclick="form.result.value = eval(form.result.value)">
+            <input id="c_id" type="button" value="C" onclick="form.result.value = '' ">
+        </div>
+        <div class = "operator">
+            <input class="btn2" type="button" value="+" onclick="form.result.value += '+'">
+            <input class="btn2" type="button" value="-" onclick="form.result.value += '-'">
+            <input class="btn2" type="button" value="* " onclick="form.result.value += '*'">
+            <input class="btn2" type="button" value="/ " onclick="form.result.value += '/'">
+            <br>
+        </div>
+    </div>
+        </form>
+
+    </div>
+</body>
+</html>
